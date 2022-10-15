@@ -1,0 +1,59 @@
+@import "../../common/styles/template";
+.user_page_container{
+  max-width: 1500px;
+}
+
+.wrapper_profile{
+  display: flex;
+  flex-direction: column;
+}
+
+
+///
+.task_container{
+  background-color:white;
+  margin-left: 8%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  padding: 10px;
+  border-radius:20px;
+  max-width: 750px;
+  width: 100%;
+ @extend %box-shadow;
+}
+
+
+.edit_form_task_list{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1292px){
+ .task_container{
+  max-width: 700px;
+ }
+}
+@media screen and (max-width:1136px) {
+  .task_container{
+    max-width: 500px;
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width:870px) {
+  .task_container{
+    max-width: 500px;
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width:509px) {
+  .task_container{
+    max-width: 380px;
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width:445px) {
+  .task_container{
+    max-width: 250px;
+    // margin-right: 60px;
+  }
+}

@@ -1,0 +1,138 @@
+@import "../../../common/styles/colors";
+@import "../../../common/styles/template";
+
+.task_edit_form{
+  display: flex;
+  align-items:center;
+  
+  position: fixed;
+  top:50%;
+  left:54%;
+  
+  max-width: 550px;
+  width: 100%;
+ 
+  border-radius:20px;
+  
+}
+.content_inner{
+  max-width: inherit;
+}
+.content_text{
+  height: 60px;
+  border-radius:20px;
+  padding: 10px 20px;
+  border:none;
+  outline: none;
+  flex-wrap: wrap;
+  font-size: 1.3rem;
+  color:$color-gray;;
+  width: 100%;
+  resize: none;
+  @extend %box-shadow;
+}
+.content_text::placeholder{
+  color:$color-gray-transporent;
+}
+
+.update_task_button,
+.close_window{
+  margin-left: 5px;
+  width: 80px;
+  border:none;
+  background-color:$color-ligth-green;
+  color:gray;
+  font-size: 20px;
+  padding: 5px 0;
+  border-radius:20px;
+  cursor: pointer;
+}
+
+.form_configure_button{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 60px;
+}
+.task_form_err_message{
+  position: absolute;
+  left:35%;
+  color:$color-gray;
+  font-weight: bold;
+}
+@media screen and (max-width: 1299px){
+  .task_edit_form{
+    left:28%;
+    max-width: 380px;
+  }
+}
+@media screen and (max-width: 1688px){
+  .task_edit_form{
+    left:64%;
+    max-width: 480px;
+  }
+}
+@media screen and (max-width: 1432px){
+  .task_edit_form{
+    left:70%;
+    top:68%;
+    max-width: 380px;
+  }
+}
+@media screen and (max-width: 1292px){
+  .task_edit_form{
+    left:68%;
+    max-width: 380px;
+  }
+}
+@media screen and (max-width:1220px) {
+  .task_edit_form{
+    max-width: 250px;
+    flex-direction: column;
+    left:72%;
+  }
+  .form_configure_button{
+    flex-direction: row;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width:1095px) {
+  .task_edit_form{
+    max-width: 250px;
+    left:65%
+  }
+}
+@media screen and (max-width:840px){
+  .task_edit_form{
+    max-width: 220px;
+    left:47%;
+    top:48%;
+
+  }
+}
+@media screen and (max-width:520px){
+  .task_edit_form{
+    max-width: 140px;
+    
+    left:50%;
+    top:48%;
+  }
+  .content_inner{
+    width: 100%;
+  }
+  .update_task_button,
+.close_window{
+  width: 40px;
+  border-radius:15px;
+  font-size: 15px;
+}
+}
+@media screen and (max-width:445px) {
+  .task_edit_form{
+    max-width: 100px;
+    left: 45%;
+  }
+  .content_text{
+    font-size: 15px;
+  }
+}

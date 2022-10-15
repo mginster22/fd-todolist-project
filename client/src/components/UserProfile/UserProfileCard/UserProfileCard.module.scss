@@ -1,0 +1,172 @@
+@import "../../../common/styles/colors";
+@import "../../../common/styles/template";
+
+.profile_card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 500px;
+  margin-left: 5%;
+  padding: 20px;
+
+  border-radius:20px ;
+  @extend %box-shadow;
+ 
+  background-color: $color-white;
+}
+.avatar{
+  width: 90px;
+  height: 90px;
+
+  margin-left: 10px;
+  margin-right: 40px;
+
+  object-fit: cover;
+  object-position: center;
+  
+  border-radius:50%;
+  border:3px solid $color-ligth-green;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  text-align: left;
+}
+.fullname{
+  max-width: 265px;
+  font-size: 25px;
+  font-weight: 500;
+    @extend %font-monserat;
+  color:$color-gray;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.login{
+  font-size: 20px;
+  font-weight: 900;
+  color:$color-black;
+  margin-top: -5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @extend %font-monserat;
+  font-style: italic;
+}
+.configure_button{
+  display: flex;
+  gap: 24px;
+  
+}
+.update_button,
+.close_task_list_btn{
+  background-color:transparent;
+  border:none;
+  font-weight: 900;
+  cursor: pointer;
+  color:$color-ligth-green;
+}
+.close_task_list_btn{
+  font-size: 35px;
+}
+.update_button:hover{
+  margin-top: 4px;
+
+};
+.close_task_list_btn:hover{
+  margin-top: 4px;
+}
+
+@media screen and (max-width:1230px) {
+  .profile_card{
+    max-width: 350px;
+    padding: 0 10px;
+  }
+  .avatar{
+    margin-left: 0;
+    width: 45px;
+    height: 45px;
+  }
+  .fullname{
+    font-size: 18px;
+    max-width:170px;
+  }
+  .login{
+    font-size: 15px;
+  }
+
+}
+@media screen and (max-width:761px){
+  .profile_card{
+    flex-direction:column;
+    max-width: 220px;
+    text-align: center;
+    padding: 10px 10px;
+  }
+  .avatar{
+    margin-left: 30px;
+    width: 50px;
+    height: 50px;
+
+  }
+  .configure_button{
+    margin-left: -20px;
+  }
+}
+@media screen and (max-width:545px){
+  .profile_card{
+    flex-direction:column;
+    max-width: 220px;
+    text-align: center;
+    padding: 10px 10px;
+  }
+  .avatar{
+    margin-left: 30px;
+    width: 50px;
+    height: 50px;
+
+  }
+  .info{
+    align-items:flex-start;
+  }
+  .fullname{
+    max-width: 200px;
+
+  }
+}
+@media screen and (max-width:509px){
+  .profile_card{
+    flex-direction:column;
+    max-width: 160px;
+    text-align: center;
+    padding: 10px 10px;
+  }
+  .avatar{
+    margin-left: 30px;
+    width: 50px;
+    height: 50px;
+
+  }
+  .info{
+    align-items:flex-start;
+  }
+  .fullname{
+    max-width: 150px;
+
+  }
+}
+@media screen and (max-width:445px) {
+  .profile_card{
+    max-width: 110px;
+  }
+  .fullname{
+    max-width: 110px;
+    font-size: 12px;
+   
+  }
+  .login{
+    font-size: 10px;
+  }
+}

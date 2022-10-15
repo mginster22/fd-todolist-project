@@ -1,0 +1,22 @@
+@import "../../common/styles/colors";
+.footer{
+  height: 120px;
+  background-color:$color-ligth-green;
+  margin-top: auto;
+}
+.footer_text{
+  font-size: 2rem;
+  color:$color-gray;;
+  background-color:$color-white;
+  max-width: 450px;
+  padding: 10px;
+  margin: 35px auto;
+  border-radius:20px;
+}
+@media screen and (max-width:470px) {
+  .footer_text{
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 350px;
+  }
+}

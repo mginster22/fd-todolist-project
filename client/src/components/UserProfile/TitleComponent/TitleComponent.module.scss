@@ -1,0 +1,75 @@
+@import "../../../common/styles/colors";
+@import "../../../common/styles/template";
+
+.title_wrapper{
+  display: flex;
+  align-items:center;
+  justify-content: flex-end;
+  .sub_title{
+      font-size: 50px;
+      color:gray;
+      font-weight: 500;
+    }
+  }
+  .title{
+    background-color:$color-ligth-green;
+    color:gray;
+    font-size: 4rem;
+    border-radius:20px;
+    padding: 10px;
+  }
+  .onTask{
+    transform: translateY(50px);
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding:15px;
+    border:none;
+    border-radius:20px;
+    color:gray;
+    background-color:$color-ligth-green;
+    @extend %box-shadow;
+    cursor:pointer;
+  }
+  .onTask:hover{
+    margin-top: 4px;
+  };
+
+@media screen and (max-width: 1450px){
+    .title_wrapper{
+      margin-right: 70px;
+    }
+  }
+@media screen and (max-width:785px){
+  .title_wrapper{
+    justify-content: flex-start;
+    margin-left: 30px;
+    .sub_title{
+      font-size: 1.7rem;
+    } 
+    }
+  .title{
+    font-size: 2.2rem;
+  }
+  .onTask{
+    transform: translateY(0);
+    margin-left: 5px;
+    padding:5px 5px;
+    font-size: 1rem;
+  }  
+  }  
+
+@media screen and (max-width:445px) {
+  .title_wrapper{
+    .sub_title{
+      font-size: 12px;
+    }
+    .title{
+      font-size: 1.4rem;
+    }
+    .onTask{
+      font-size: 12px;
+      border-radius:10px;
+    }
+
+  }
+}  

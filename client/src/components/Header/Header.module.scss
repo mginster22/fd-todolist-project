@@ -1,0 +1,18 @@
+@import "../../common/styles/colors";
+
+.nav_list{
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 60px;
+  height: 60px;
+  background-color: $color-ligth-green;
+}
+
+.link_logo{
+  text-decoration: none;
+  display: block;
+}
+.item{
+  display: flex;
+  gap: 40px;
+}

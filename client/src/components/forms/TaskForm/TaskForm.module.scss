@@ -1,0 +1,127 @@
+@import "../../../common/styles/colors";
+@import "../../../common/styles/template";
+.form_task{
+  display: flex;
+  align-items:center;
+  gap:50px;
+  max-width: 400px;
+  width: 100%;
+  margin-left: auto;
+  margin-top: 2%;
+  margin-bottom: -5%;
+}
+
+.content{
+  height: 60px;
+  border-radius:20px;
+  padding: 10px 20px;
+  border:none;
+  outline: none;
+  flex-wrap: wrap;
+  font-size: 1.3rem;
+  color:gray;
+  width: 100%;
+  resize: none;
+  @extend %box-shadow;
+}
+.content::placeholder{
+  color:$color-gray-transporent;
+}
+.content_input{
+  width: 100%;
+  position: relative;
+}
+.task_form_err_message{
+  position: absolute;
+  left:35%;
+  color:$color-gray;
+  font-weight: bold;
+}
+.add_task_button{
+  margin-left: 5px;
+  width: 80px;
+  border:none;
+  background-color:$color-ligth-green;
+  color:gray;
+  font-size: 20px;
+  padding: 5px 0;
+  border-radius:20px;
+  cursor: pointer;
+}
+.add_task_button:hover{
+  margin-top: 4px;
+}
+@media screen and (max-width: 1450px){
+  .form_task{
+     margin-right: 50px;
+  } 
+}
+@media screen and (max-width:970px) {
+  .form_task{
+    max-width: 300px;
+  }
+}
+@media screen and (max-width:675px){
+  .form_task{
+    max-width: 200px;
+    flex-direction: column;
+    margin-bottom: -160px;
+    margin-right: 130px;
+    gap: 0;
+  }
+  .content{
+    height: 100px;
+  }
+  .add_task_button{
+    margin-left: auto;
+  }
+  .task_form_err_message{
+    bottom:5%;
+  }
+}
+@media screen and (max-width:607px){
+  .form_task{
+    max-width: 200px;
+    flex-direction: column;
+    margin-bottom: -160px;
+    margin-right: 80px;
+    gap: 0;
+  }
+  .content{
+    height: 100px;
+  }
+  .add_task_button{
+    margin-left: auto;
+  }
+  .task_form_err_message{
+    bottom:5%;
+  }
+}
+@media screen and (max-width:565px){
+  .form_task{
+    max-width: 160px;
+    flex-direction: column;
+    margin-bottom: -160px;
+    margin-right: 80px;
+    gap: 0;
+  }
+  .content{
+    height: 100px;
+  }
+  .add_task_button{
+    margin-left: auto;
+    
+  }
+  .task_form_err_message{
+    bottom:5%;
+  }
+}
+@media screen and (max-width:445px) {
+  .form_task{
+    max-width: 110px;
+    margin-right: 90px;
+  }
+  .content{
+    font-size: 15px;
+  }
+}
