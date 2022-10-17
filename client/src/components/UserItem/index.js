@@ -23,7 +23,7 @@ const UserItem = (props) => {
       {user.avatar ? (
         <div className={styles.card_avatar_wrapper}>
           <div
-            className={styles.default_image}
+            className={styles.default_image_word}
             style={{ backgroundColor: `${stringToColour(user.name)}` }}
           >
             {user.name[0]}
@@ -36,7 +36,7 @@ const UserItem = (props) => {
           />
         </div>
       ) : (
-        <img src={defaultImage} className={styles.avatar} alt={user.name} />
+        <img src={defaultImage} className={styles.default_image} alt={user.name} />
       )}
 
       <div className={styles.info}>
