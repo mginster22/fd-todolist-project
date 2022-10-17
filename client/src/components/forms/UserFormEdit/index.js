@@ -4,14 +4,14 @@ import { useDispatch } from "react-redux";
 import { updateUserRequset } from "../../../actions/usersCreators";
 import AutoAwesomeMotionIcon from "@mui/icons-material/AutoAwesomeMotion";
 import CloseIcon from "@mui/icons-material/Close";
-import {validationShemas} from '../../../utils/validate'
+import { validationShemas } from "../../../utils/validate";
 import cx from "classnames";
 import styles from "./UserFormEdit.module.scss";
 
 const UserFormEditWrapper = ({
   setModalActive,
   formikProps,
-  
+
   user,
 }) => {
   const filePicker = useRef(null);
@@ -116,8 +116,6 @@ const UserFormEdit = ({ setModalActive, user, modalActive }) => {
     setModalActive(false);
     formikBag.resetForm();
   };
-
-
 
   return (
     <>
