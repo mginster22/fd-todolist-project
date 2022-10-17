@@ -6,8 +6,10 @@
   background-color:$color-ligth-black-modal;
   position: fixed;
   top:0;
-  left:0
+  left:0;
+  transition: all 2s;
 }
+
 .modal_wrapper{
   display: flex;
   flex-direction: column;
@@ -26,6 +28,7 @@
   margin:  auto;
   background-color: $color-antiquare;
   border-radius:20px;
+
 }
 .change_profile_info{
   margin-left: 10%;
@@ -35,10 +38,12 @@
   font-weight: bold;
 }
 .close_modal{
+  
   margin-left: auto;
   margin-bottom: 30px;
   color:$color-ligth-green;
   cursor: pointer;
+  
 }
 
 label{

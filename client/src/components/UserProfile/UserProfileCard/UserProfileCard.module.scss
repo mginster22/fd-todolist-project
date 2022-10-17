@@ -14,11 +14,37 @@
  
   background-color: $color-white;
 }
-.avatar{
+
+
+.card_avatar_wrapper{
   width: 90px;
   height: 90px;
+  position: relative;
+}
+.card_avatar_wrapper > *{
+  width: 90px;
+  height: 90px;
+  top:0;
+  left:5px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  border-radius:50%;
 
-  margin-left: 10px;
+}
+.default_image{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  // left: 15.5px;
+  z-index: 0;
+  background-color:black;
+  color:white;
+  border:3px solid $color-ligth-green;
+
+}
+
+.avatar{
   margin-right: 40px;
 
   object-fit: cover;
@@ -30,9 +56,12 @@
 .info{
   display: flex;
   flex-direction: column;
-  width: 100%;
-
+  max-width: 400px;
   text-align: left;
+  flex-wrap: wrap;
+   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .fullname{
   max-width: 265px;
@@ -40,20 +69,18 @@
   font-weight: 500;
     @extend %font-monserat;
   color:$color-gray;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+ 
 }
 .login{
   font-size: 20px;
   font-weight: 900;
   color:$color-black;
   margin-top: -5px;
+  @extend %font-monserat;
+  font-style: italic;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  @extend %font-monserat;
-  font-style: italic;
 }
 .configure_button{
   display: flex;
@@ -73,8 +100,8 @@
 }
 .update_button:hover{
   margin-top: 4px;
-
 };
+
 .close_task_list_btn:hover{
   margin-top: 4px;
 }
@@ -84,10 +111,12 @@
     max-width: 350px;
     padding: 0 10px;
   }
-  .avatar{
+ 
+  .avatar,.default_image{
     margin-left: 0;
-    width: 45px;
-    height: 45px;
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
   }
   .fullname{
     font-size: 18px;
@@ -105,11 +134,11 @@
     text-align: center;
     padding: 10px 10px;
   }
-  .avatar{
-    margin-left: 30px;
-    width: 50px;
-    height: 50px;
-
+  .avatar,.default_image{
+    margin-left: 0;
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
   }
   .configure_button{
     margin-left: -20px;
@@ -122,11 +151,11 @@
     text-align: center;
     padding: 10px 10px;
   }
-  .avatar{
-    margin-left: 30px;
-    width: 50px;
-    height: 50px;
-
+  .avatar,.default_image{
+    margin-left: 0;
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
   }
   .info{
     align-items:flex-start;
@@ -143,11 +172,11 @@
     text-align: center;
     padding: 10px 10px;
   }
-  .avatar{
-    margin-left: 30px;
-    width: 50px;
-    height: 50px;
-
+  .avatar,.default_image{
+    margin-left: 0;
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
   }
   .info{
     align-items:flex-start;
