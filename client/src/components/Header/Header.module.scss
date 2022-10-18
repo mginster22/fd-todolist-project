@@ -16,3 +16,11 @@
   display: flex;
   gap: 40px;
 }
+@media screen and (max-width:445px) {
+  .nav_list{
+    justify-content: space-between;
+  }
+  .item{
+    gap:15px;
+  }
+}
