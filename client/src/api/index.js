@@ -2,7 +2,7 @@ import axios from "axios";
 import FormData from "form-data";
 import qs from "query-string";
 const httpClient = axios.create({
-  baseURL: "http://localhost:3004/api",
+  baseURL: "http://localhost:3001/api",
 });
 
 export const createUser = (data) => {

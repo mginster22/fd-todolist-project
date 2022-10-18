@@ -7,7 +7,6 @@
   position: fixed;
   top:0;
   left:0;
-  transition: all 2s;
 }
 
 .modal_wrapper{
@@ -90,28 +89,9 @@ label{
     color:$color-white;
   }
 }
-.finish_registr{
-  width: 400px;
-  margin: 20px auto;
-  background-color:$color-white;
-  border-radius:20px;
-}
 
-.gomer{
-  width: inherit;
-  height: 300px;
-  object-fit: cover;
-  object-position: top;
-  border-radius:20px;
-}
-.finish_text{
-  text-align: center;
-  padding: 10px;
-}
-.heading_finish{
-  font-weight: 900;
-  font-size: 28px;
-}
+
+
 .error{
   color:$color-red;
   text-align: center;
@@ -144,10 +124,18 @@ label{
     width: 100%;
     margin-left: 35px;
   }
+  .change_profile_info{
+    font-size: 18px;
+  }
   .registr_input{
     width: 80%;
+    padding: 6px 8px;
+    font-size: 12px;
   }
   .file_picker{
-    width: 50px;
+    width: 30px;
+  }
+  .submit{
+    width: 150px;
   }
 }

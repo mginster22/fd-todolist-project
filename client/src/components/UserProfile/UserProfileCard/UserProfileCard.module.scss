@@ -190,10 +190,19 @@
   .profile_card{
     max-width: 110px;
   }
+  .info{
+    max-width: 120px;
+  }
   .fullname{
-    max-width: 110px;
+    width: 100%;
     font-size: 12px;
    
+  }
+  .avatar,.default_image{
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
   }
   .login{
     font-size: 10px;
