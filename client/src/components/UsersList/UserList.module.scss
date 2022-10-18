@@ -250,6 +250,10 @@
   .card_avatar_wrapper{
     right: 19px;
   }
+  .avatar,.default_image,.default_image_word{
+    width: 40px;
+    height: 40px;
+  }
   .default_image{
     margin-left: 0;
   }
@@ -258,10 +262,10 @@
   }
   
   .fullname{
-    font-size: 14px;
+    font-size: 10px;
   }
   .name{
-    font-size: 12px;
+    font-size: 10px;
   }
   .update{
     margin-left: -10px;
