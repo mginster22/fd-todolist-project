@@ -11,6 +11,7 @@ import {
   updateUserError,
   updateUserSuccess,
   getUserByIdRequest,
+  getUsersRequest,
 } from "../actions/usersCreators";
 import {
   createUser,
