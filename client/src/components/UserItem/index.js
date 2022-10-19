@@ -64,7 +64,7 @@ const UserItem = (props) => {
           className={styles.update}
           onClick={() => {
             dispatch(deleteUserByIdRequest(user.id));
-            dispatch(getUsersRequest({ offset: offset - 4, limit: LIMIT }));
+            dispatch(getUsersRequest({ offset, limit: LIMIT }));
           }}
         >
           <DeleteIcon />
