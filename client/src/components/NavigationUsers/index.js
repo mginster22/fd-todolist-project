@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setOffset, setCurrentPage } from "../../actions/usersCreators";
 import styles from "../UsersList/UserList.module.scss";
@@ -6,7 +6,17 @@ import CONSTANTS from "../../constants";
 const { LIMIT } = CONSTANTS;
 
 const NavigatonUsers = () => {
-  const { users, offset, currentPage } = useSelector(({ users }) => users);
+  const { users, offset, currentPage, totalUsers } = useSelector(
+    ({ users }) => users
+  );
+  // console.log(totalUsers.length);
+  const totalUsersLength = () => {
+    if (offset > totalUsers.length) {
+      return;
+    }
+  };
+  // const totalUsersLegth = totalUsers.forEach((users) => users);
+
   const dispatch = useDispatch();
   const handlerNext = () => {
     dispatch(setOffset({ offset: offset + LIMIT }));
@@ -30,7 +40,7 @@ const NavigatonUsers = () => {
       <button
         className={styles.navigate_button}
         onClick={handlerNext}
-        disabled={offset >= users.length}
+        disabled={offset >= LIMIT + users}
       >
         &#10095;
       </button>

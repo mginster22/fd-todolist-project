@@ -45,7 +45,7 @@ const UserProfileCard = ({
       ) : (
         <img
           src={defaultImage}
-          className={styles.avatar}
+          className={styles.default_image_user}
           alt={selectedUser.name}
         />
       )}

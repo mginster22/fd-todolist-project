@@ -9,7 +9,9 @@ import UserItem from "../UserItem";
 import styles from "./UserList.module.scss";
 
 const UsersList = () => {
-  const { users, isFetching, offset } = useSelector(({ users }) => users);
+  const { users, isFetching, offset, totalUsers } = useSelector(
+    ({ users }) => users
+  );
   const [search, setSearch] = useState("");
 
   const onChangeSearchValue = ({ target: { value } }) => {
@@ -44,7 +46,14 @@ const UsersList = () => {
               );
             })
             .map((user) => {
-              return <UserItem key={user.id} user={user} />;
+              return (
+                <UserItem
+                  key={user.id}
+                  user={user}
+                  offset={offset}
+                  users={users}
+                />
+              );
             })
         )}
         <NavigatonUsers />

@@ -15,7 +15,12 @@
   background-color: $color-white;
 }
 
-
+.default_image_user{
+  width: 90px;
+  height: 90px;
+  border:3px solid $color-ligth-green;
+  border-radius:50%;
+}
 .card_avatar_wrapper{
   width: 90px;
   height: 90px;
@@ -118,6 +123,10 @@
     width: 60px;
     height: 60px;
   }
+  .default_image_user{
+    width: 50px;
+    height: 50px;
+  }
   .fullname{
     font-size: 18px;
     max-width:170px;
@@ -197,6 +206,10 @@
     width: 100%;
     font-size: 12px;
    
+  }
+  .default_image_user{
+    width: 50px;
+    height: 50px;
   }
   .avatar,.default_image{
     margin-left: 10px;

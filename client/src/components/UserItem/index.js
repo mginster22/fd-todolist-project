@@ -1,17 +1,20 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { deleteUserByIdRequest } from "../../actions/usersCreators";
+import {
+  deleteUserByIdRequest,
+  getUsersRequest,
+} from "../../actions/usersCreators";
 import DeleteIcon from "@mui/icons-material/Delete";
 import defaultImage from "../../assets/images/default.jpg";
 import ModeEditIcon from "@mui/icons-material/ModeEdit";
 import styles from "../UsersList/UserList.module.scss";
 import stringToColour from "../../utils/stringToColour";
 import CONSTANTS from "../../constants";
-const { IMAGE_URL } = CONSTANTS;
+const { IMAGE_URL, LIMIT } = CONSTANTS;
 
 const UserItem = (props) => {
-  const { user } = props;
+  const { user, offset, users } = props;
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const handlerErrorAvatar = ({ target }) => {
@@ -36,7 +39,11 @@ const UserItem = (props) => {
           />
         </div>
       ) : (
-        <img src={defaultImage} className={styles.default_image} alt={user.name} />
+        <img
+          src={defaultImage}
+          className={styles.default_image}
+          alt={user.name}
+        />
       )}
 
       <div className={styles.info}>
@@ -55,7 +62,10 @@ const UserItem = (props) => {
         </button>
         <button
           className={styles.update}
-          onClick={() => dispatch(deleteUserByIdRequest(user.id), [])}
+          onClick={() => {
+            dispatch(deleteUserByIdRequest(user.id));
+            dispatch(getUsersRequest({ offset: offset - 4, limit: LIMIT }));
+          }}
         >
           <DeleteIcon />
         </button>
