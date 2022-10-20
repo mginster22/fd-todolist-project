@@ -101,22 +101,31 @@ const UserForm = () => {
                   className={styles.error}
                 />
               </label>
+              <label htmlFor="file" className={styles.label_for_file}>
+                <button
+                  onClick={handlerPick}
+                  className={styles.file_picker}
+                  type="button"
+                >
+                  <AutoAwesomeMotionIcon />
+                </button>
+                <span className={styles.file_name}>
+                  {formikProps.values.avatar
+                    ? formikProps.values.avatar.name
+                    : "choose your file"}
+                </span>
+              </label>
 
-              <button
-                onClick={handlerPick}
-                className={styles.file_picker}
-                type="button"
-              >
-                <AutoAwesomeMotionIcon />
-              </button>
               <input
+                id="file"
                 type="file"
                 name="avatar"
                 ref={filePicker}
                 className={styles.hidden}
-                onChange={(e) =>
-                  formikProps.setFieldValue("avatar", e.target.files[0])
-                }
+                onChange={(e) => {
+                  console.log(formikProps.values.avatar.name);
+                  formikProps.setFieldValue("avatar", e.target.files[0]);
+                }}
               />
               <input type="submit" className={styles.submit} value="Next" />
             </Form>

@@ -59,8 +59,6 @@ const handlers = {
   [ACTION_TYPES.UPDATE_USER_ERROR]: handlerError,
   [ACTION_TYPES.UPDATE_USER_SUCCESS]: produce((draftState, action) => {
     draftState.isFetching = false;
-
-    
   }),
 
   //SETOFFSET

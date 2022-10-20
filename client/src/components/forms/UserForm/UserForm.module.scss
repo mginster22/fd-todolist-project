@@ -31,11 +31,18 @@ label{
   line-height: 0;
 }
 .file_picker{
-  width: 100px;
+  max-width: 150px;
   margin-right: auto;
   background-color: inherit;
   border: none;
   cursor: grab;
+}
+.label_for_file{
+  max-width: 140px;
+}
+.file_name{
+font-size: 13px;
+color:$color-gray;
 }
 .submit{
   width: 200px;
