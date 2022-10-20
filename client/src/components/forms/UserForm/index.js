@@ -109,10 +109,11 @@ const UserForm = () => {
                 >
                   <AutoAwesomeMotionIcon />
                 </button>
+
                 <span className={styles.file_name}>
                   {formikProps.values.avatar
                     ? formikProps.values.avatar.name
-                    : "choose your file"}
+                    : "choose  file"}
                 </span>
               </label>
 

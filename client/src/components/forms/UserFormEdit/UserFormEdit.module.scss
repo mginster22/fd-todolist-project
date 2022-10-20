@@ -49,6 +49,16 @@ label{
   width: 400px;
   position: relative;
 }
+.label_file{
+  display: flex;
+ max-width: 120px;
+  margin-right: auto;
+  margin-left: 40px;
+
+}
+.file_avatar{
+  font-size: 12px;
+}
 .registr_input{
   width: inherit;
   margin-bottom: 20px ;
@@ -70,8 +80,7 @@ label{
   line-height: 0;
 }
 .file_picker{
-  width: 100px;
-  margin-right: 70%;
+  width: 50px;
   background-color: inherit;
   border: none;
   cursor: grab;

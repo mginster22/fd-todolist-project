@@ -89,14 +89,23 @@ const UserFormEditWrapper = ({
         />
       </label>
 
-      <button
-        onClick={handlerPick}
-        className={styles.file_picker}
-        type="button"
-      >
-        <AutoAwesomeMotionIcon />
-      </button>
+      <label className={styles.label_file}>
+        <button
+          onClick={handlerPick}
+          className={styles.file_picker}
+          type="button"
+        >
+          <AutoAwesomeMotionIcon />
+        </button>
+        <span className={styles.file_avatar}>
+          {formikProps.values.avatar
+            ? formikProps.values.avatar.name
+            : "choose file"}
+        </span>
+      </label>
+
       <input
+        id="file"
         type="file"
         name="avatar"
         ref={filePicker}
