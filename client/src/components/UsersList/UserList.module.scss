@@ -18,8 +18,9 @@
 }
 
 .search_inner{
+  width: 100%;
   text-align: center;
-  margin: 0 auto;
+  margin: auto;
   position: relative;
 
 }
@@ -194,9 +195,7 @@
     width: 340px;
     align-items:center;
   }
-  .search_inner{
-    margin-left: -20px;
-  }
+ 
   .search_user{
     width: 50%;
   }
@@ -231,9 +230,7 @@
     width: 250px;
     align-items:center;
   }
-  .search_inner{
-    margin-left: 0px;
-  }
+ 
   .search_user{
     width: 64%;
   }

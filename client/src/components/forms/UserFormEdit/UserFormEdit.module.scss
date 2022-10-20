@@ -1,64 +1,22 @@
 @import "../../../common/styles/colors";
 
-.modal_container{
-  width: 100vw;
-  height: 100vh;
-  background-color:$color-ligth-black-modal;
-  position: fixed;
-  top:0;
-  left:0;
-}
 
-.modal_wrapper{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 
-}
-.form{
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-  padding-right: 50px;
-  padding-top: 40px;
-  padding-bottom: 30px;
-  justify-content: center;
-  width: 540px;
-  margin:  auto;
-  background-color: $color-antiquare;
-  border-radius:20px;
 
-}
-.change_profile_info{
-  margin-left: 10%;
-  margin-top:0;
-  margin-bottom:0;
-  color:gray;
-  font-weight: bold;
-}
-.close_modal{
-  
-  margin-left: auto;
-  margin-bottom: 30px;
-  color:$color-ligth-green;
-  cursor: pointer;
-  
-}
+// label{
+//   width: 400px;
+//   position: relative;
+// }
+// .label_file{
+//   display: flex;
+//  max-width: 120px;
+//   margin-right: auto;
+//   margin-left: 40px;
 
-label{
-  width: 400px;
-  position: relative;
-}
-.label_file{
-  display: flex;
- max-width: 120px;
-  margin-right: auto;
-  margin-left: 40px;
-
-}
-.file_avatar{
-  font-size: 12px;
-}
+// }
+// .file_avatar{
+//   font-size: 12px;
+// }
 .registr_input{
   width: inherit;
   margin-bottom: 20px ;
@@ -114,7 +72,7 @@ label{
   border:2px solid $color-red;
 }
 @media screen and (max-width:663px) {
-  .form{
+  .form_edit{
    max-width: 350px;
   }
   label{
@@ -126,24 +84,10 @@ label{
   }
 }
 @media screen and (max-width:415px) {
-  .form{
+  .form_edit{
    max-width: 250px;
   }
-  label{
-    width: 100%;
-    margin-left: 35px;
-  }
-  .change_profile_info{
-    font-size: 18px;
-  }
-  .registr_input{
-    width: 80%;
-    padding: 6px 8px;
-    font-size: 12px;
-  }
-  .file_picker{
-    width: 30px;
-  }
+  
   .submit{
     width: 150px;
   }

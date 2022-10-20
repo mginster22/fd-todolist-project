@@ -6,10 +6,53 @@
   width: 440px;
   margin: 180px auto;
 }
-label{
-  width: 400px;
-  position: relative;
+.modal_container{
+  width: 100vw;
+  height: 100vh;
+  background-color:$color-ligth-black-modal;
+  position: fixed;
+  top:0;
+  left:0;
 }
+
+.modal_wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.form_edit{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  padding-right: 50px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  justify-content: center;
+  width: 540px;
+  margin:  auto;
+  background-color: $color-antiquare;
+  border-radius:20px;
+
+}
+.change_profile_info{
+  margin-left: 10%;
+  margin-top:0;
+  margin-bottom:0;
+  color:gray;
+  font-weight: bold;
+}
+.close_modal{
+  margin-left: auto;
+  margin-bottom: 10px;
+
+  color:$color-ligth-green;
+  cursor: pointer;
+}
+.login{
+  width: 400px;
+  margin: auto;
+}
+
 .registr_input{
   width: inherit;
   margin-bottom: 20px ;
@@ -30,6 +73,10 @@ label{
   opacity: 0;
   line-height: 0;
 }
+.label_for_file{
+  margin-right: auto;
+  transform: translateX(50px);
+}
 .file_picker{
   max-width: 150px;
   margin-right: auto;
@@ -37,9 +84,7 @@ label{
   border: none;
   cursor: grab;
 }
-.label_for_file{
-  max-width: 140px;
-}
+
 .file_name{
 font-size: 13px;
 color:$color-gray;
@@ -110,6 +155,7 @@ color:$color-gray;
     margin-left: 40px;
     margin-top: 120px;
   }
+ 
   .error{
     font-size: 13px;
   }
@@ -124,5 +170,20 @@ color:$color-gray;
   }
   .gomer{
     height: 230px;
+  }
+}
+@media screen and (max-width:450px){
+  .form_edit{
+    max-width: 250px;
+  }
+  .login{
+    margin: auto;
+    width: 220px;
+  }
+  .close_modal{
+    transform: translate(40px,-30px)
+  }
+  .label_for_file{
+    margin-right: auto;
   }
 }

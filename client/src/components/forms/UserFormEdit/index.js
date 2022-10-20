@@ -1,12 +1,12 @@
-import React, { useRef, useEffect } from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import React, { useEffect } from "react";
+import { Formik, Form } from "formik";
 import { useDispatch } from "react-redux";
 import { updateUserRequset } from "../../../actions/usersCreators";
-import AutoAwesomeMotionIcon from "@mui/icons-material/AutoAwesomeMotion";
 import CloseIcon from "@mui/icons-material/Close";
 import { validationShemas } from "../../../utils/validate";
-import cx from "classnames";
-import styles from "./UserFormEdit.module.scss";
+import InputForm from "../InputForm/index";
+import InputTypeFile from "../InputTypeFile/index";
+import styles from "../UserForm/UserForm.module.scss";
 
 const UserFormEditWrapper = ({
   setModalActive,
@@ -14,9 +14,6 @@ const UserFormEditWrapper = ({
 
   user,
 }) => {
-  const filePicker = useRef(null);
-  const handlerPick = () => filePicker.current.click();
-
   useEffect(() => {
     if (
       typeof user.login === "string" &&
@@ -30,7 +27,7 @@ const UserFormEditWrapper = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
   return (
-    <Form className={styles.form}>
+    <Form className={styles.form_edit}>
       <h2 className={styles.change_profile_info}>Change your profile</h2>
       <div className={styles.close_modal}>
         {
@@ -40,78 +37,12 @@ const UserFormEditWrapper = ({
           />
         }
       </div>
-      <label className={styles.login}>
-        <Field name="name">
-          {({ field, form, meta }) => {
-            const inputClasses = cx(styles.registr_input, {
-              [styles.invalid]: meta.error && meta.touched,
-            });
-            return (
-              <input {...field} className={inputClasses} placeholder="name" />
-            );
-          }}
-        </Field>
-        <ErrorMessage name="name" component="div" className={styles.error} />
-      </label>
-      <label className={styles.login}>
-        <Field name="login">
-          {({ field, form, meta }) => {
-            const inputClasses = cx(styles.registr_input, {
-              [styles.invalid]: meta.error && meta.touched,
-            });
-            return (
-              <input {...field} className={inputClasses} placeholder="login" />
-            );
-          }}
-        </Field>
-        <ErrorMessage name="login" component="div" className={styles.error} />
-      </label>
-      <label className={styles.password}>
-        <Field name="password">
-          {({ field, form, meta }) => {
-            const inputClasses = cx(styles.registr_input, {
-              [styles.invalid]: meta.error && meta.touched,
-            });
-            return (
-              <input
-                {...field}
-                className={inputClasses}
-                placeholder="password"
-                type="password"
-              />
-            );
-          }}
-        </Field>
-        <ErrorMessage
-          name="password"
-          component="div"
-          className={styles.error}
-        />
-      </label>
+      <InputForm name="name" placeholder="name" />
+      <InputForm name="login" placeholder="login" />
+      <InputForm name="password" placeholder="password" />
 
-      <label className={styles.label_file}>
-        <button
-          onClick={handlerPick}
-          className={styles.file_picker}
-          type="button"
-        >
-          <AutoAwesomeMotionIcon />
-        </button>
-        <span className={styles.file_avatar}>
-          {formikProps.values.avatar
-            ? formikProps.values.avatar.name
-            : "choose file"}
-        </span>
-      </label>
+      <InputTypeFile formikProps={formikProps} />
 
-      <input
-        id="file"
-        type="file"
-        name="avatar"
-        ref={filePicker}
-        className={styles.hidden}
-        onChange={(e) => formikProps.setFieldValue("avatar", e.target.files[0])}
-      />
       <input type="submit" className={styles.submit} value="Save" />
     </Form>
   );
